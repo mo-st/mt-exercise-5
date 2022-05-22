@@ -1,11 +1,11 @@
-name: "transformer_bpe_v2000"
+name: "transformer_bpe_v4000"
 
 data:
     src: "en"
     trg: "de"
-    train: "myData/train.bpe.en-de"
-    dev:   "myData/dev.bpe.en-de"
-    test:  "myData/test.bpe.en-de"
+    train: "myData/train.4k.bpe.en-de"
+    dev:   "myData/dev.4k.bpe.en-de"
+    test:  "myData/test.4k.bpe.en-de"
     level: "bpe"
     lowercase: False
     max_sent_length: 100
@@ -13,11 +13,11 @@ data:
     #src_voc_limit: 2000
     #trg_voc_limit: 2000
     # or (= not both!) a file with a vocabulary built before starting the training:
-    src_vocab: "myData/vocab.joint.2k.bpe"
-    trg_vocab: "myData/vocab.joint.2k.bpe"
-    load_model: "models/transformer_bpe_v2000c2"
+    src_vocab: "myData/vocab.joint.4k.bpe"
+    trg_vocab: "myData/vocab.joint.4k.bpe"
+
 testing:
-    beam_size: 5
+    beam_size: 7
     alpha: 1.0
 
 training:
@@ -38,7 +38,7 @@ training:
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "models/transformer_bpe_v2000c3"
+    model_dir: "models/transformer_no_tok_bpe_v4000"
     overwrite: False
     shuffle: True
     use_cuda: False
