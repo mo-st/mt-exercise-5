@@ -1,44 +1,11 @@
-# MT Exercise 5: Byte Pair Encoding, Beam Search
+# Task 1
+## Evaluation
+| |use BPE|vocabulary size|BLEU|
+|---|---|---|---|
+|(a)|no|2000|12.3|
+|(b)|yes|2000|18.5|
+|(c)|yes|4000|19.8|
 
-This repo is just a collection of scripts showing how to install [JoeyNMT](https://github.com/joeynmt/joeynmt), download
-data and train & evaluate models.
-
-# Requirements
-
-- This only works on a Unix-like system, with bash.
-- Python 3 must be installed on your system, i.e. the command `python3` must be available
-- Make sure virtualenv is installed on your system. To install, e.g.
-
-    `pip install virtualenv`
-
-# Steps
-
-Clone this repository in the desired place:
-
-    git clone https://github.com/emmavdbold/mt-exercise-5
-
-Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
-
-    ./scripts/make_virtualenv.sh
-
-**Important**: Then activate the env by executing the `source` command that is output by the shell script above.
-
-Download and install required software:
-
-    ./scripts/download_install_packages.sh
-
-Download data:
-
-    ./download_iwslt_2017_data.sh
-
-The data is only minimally preprocessed, so you may want to tokenize it and apply any further preprocessing steps.
-
-Train a model:
-
-    ./scripts/train.sh
-
-The training process can be interrupted at any time, and the best checkpoint will always be saved.
-
-Evaluate a trained model with
-
-    ./scripts/evaluate.sh
+## Task 2 - Beam size
+Note: I also took the liberty of adding plot for the time it took to evaluate with different beam sizes, as I thought this was interesting
+[image of the line plot relating the beams size to BLEU-score and time in seconds](results/graph.png)
