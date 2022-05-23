@@ -38,7 +38,7 @@ training:
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "models/transformer_no_tok_bpe_v4000"
+    model_dir: "models/transformer_bpe_v4000"
     overwrite: False
     shuffle: True
     use_cuda: False

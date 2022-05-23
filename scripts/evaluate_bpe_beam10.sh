@@ -33,7 +33,7 @@ translations_sub=$translations/$model_name
 
 mkdir -p $translations_sub
 
-CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt translate $configs/$model_name.yaml < $myData/test.bpe.4k.en-de.$src > $translations_sub/test.bpe.$model_name.$trg
+CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python -m joeynmt translate $configs/$model_name.yaml < $myData/test.4k.bpe.en-de.$src > $translations_sub/test.bpe.$model_name.$trg
 
 # undo BPE
 

@@ -15,7 +15,6 @@ data:
     # or (= not both!) a file with a vocabulary built before starting the training:
     src_vocab: "myData/vocab.joint.2k.bpe"
     trg_vocab: "myData/vocab.joint.2k.bpe"
-    load_model: "models/transformer_bpe_v2000c2"
 testing:
     beam_size: 5
     alpha: 1.0
@@ -38,7 +37,7 @@ training:
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "models/transformer_bpe_v2000c3"
+    model_dir: "models/transformer_bpe_v2000"
     overwrite: False
     shuffle: True
     use_cuda: False

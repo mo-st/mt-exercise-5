@@ -13,8 +13,8 @@ def cli():
     return args
 
 def main(args):
-    df = pd.read_csv(args.i, names=["Beam size", "BLEU"])
-    line = df.plot.line(x="Beam size", y="BLEU")
+    df = pd.read_csv(args.i, names=["Beam size", "BLEU", "time in s"])
+    line = df.plot.line(x="Beam size", subplots=True)
     #plt.show()
     plt.savefig(args.o)
 
